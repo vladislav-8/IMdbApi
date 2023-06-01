@@ -1,13 +1,14 @@
 package com.practicum.imdbapi.presentation.movies
 
-import com.practicum.imdbapi.domain.models.Movie
+import com.practicum.imdbapi.ui.movies.MoviesState
 
 interface MoviesView {
 
-    fun showPlaceholderMessage(isVisible: Boolean)
-    fun showMoviesList(isVisible: Boolean)
-    fun showProgressBar(isVisible: Boolean)
-    fun changePlaceholderText(newPlaceholderText: String)
-    fun updateMoviesList(newMoviesList: List<Movie>)
-    fun showToast(message: String)
+    // Методы, меняющие внешний вид экрана
+
+    fun render(state: MoviesState)
+
+    // Методы «одноразовых событий»
+
+    fun showToast(additionalMessage: String)
 }

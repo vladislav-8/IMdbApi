@@ -1,8 +1,6 @@
 package com.practicum.imdbapi.util
 
-import android.app.Activity
 import android.content.Context
-import android.widget.ImageView
 import com.practicum.imdbapi.domain.impl.MoviesRepositoryImpl
 import com.practicum.imdbapi.data.network.RetrofitNetworkClient
 import com.practicum.imdbapi.domain.api.MoviesInteractor
