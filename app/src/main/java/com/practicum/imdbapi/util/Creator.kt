@@ -2,14 +2,16 @@ package com.practicum.imdbapi.util
 
 import android.app.Activity
 import android.content.Context
+import android.widget.ImageView
 import com.practicum.imdbapi.domain.impl.MoviesRepositoryImpl
 import com.practicum.imdbapi.data.network.RetrofitNetworkClient
 import com.practicum.imdbapi.domain.api.MoviesInteractor
 import com.practicum.imdbapi.domain.api.MoviesRepository
 import com.practicum.imdbapi.domain.impl.MoviesInteractorImpl
 import com.practicum.imdbapi.presentation.movies.MoviesSearchPresenter
-import com.practicum.imdbapi.presentation.PosterController
+import com.practicum.imdbapi.presentation.poster.PosterPresenter
 import com.practicum.imdbapi.presentation.movies.MoviesView
+import com.practicum.imdbapi.presentation.poster.PosterView
 
 object Creator {
 
@@ -31,7 +33,10 @@ object Creator {
         )
     }
 
-    fun providePosterController(activity: Activity): PosterController {
-        return PosterController(activity)
+    fun providePosterPresenter(
+        posterView: PosterView,
+        imageUrl: String,
+    ): PosterPresenter {
+        return PosterPresenter(posterView, imageUrl)
     }
 }
