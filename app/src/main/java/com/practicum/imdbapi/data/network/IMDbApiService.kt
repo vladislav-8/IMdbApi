@@ -1,5 +1,6 @@
-package com.practicum.imdbapi
+package com.practicum.imdbapi.data.network
 
+import com.practicum.imdbapi.data.dto.MoviesSearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

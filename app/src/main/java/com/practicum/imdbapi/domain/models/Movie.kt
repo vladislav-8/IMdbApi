@@ -1,4 +1,4 @@
-package com.practicum.imdbapi
+package com.practicum.imdbapi.domain.models
 
 data class Movie(val id: String,
                  val resultType: String,

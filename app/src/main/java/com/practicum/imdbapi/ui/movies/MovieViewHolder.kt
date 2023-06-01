@@ -1,4 +1,4 @@
-package com.practicum.imdbapi
+package com.practicum.imdbapi.ui.movies
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,6 +6,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.practicum.imdbapi.R
+import com.practicum.imdbapi.domain.models.Movie
 
 class MovieViewHolder(parent: ViewGroup) :
     RecyclerView.ViewHolder(

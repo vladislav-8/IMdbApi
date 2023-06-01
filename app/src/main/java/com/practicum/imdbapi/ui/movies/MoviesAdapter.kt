@@ -1,7 +1,8 @@
-package com.practicum.imdbapi
+package com.practicum.imdbapi.ui.movies
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.practicum.imdbapi.domain.models.Movie
 
 class MoviesAdapter(private val clickListener: MovieClickListener) : RecyclerView.Adapter<MovieViewHolder>() {
 
