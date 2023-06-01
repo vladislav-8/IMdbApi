@@ -1,5 +1,6 @@
-package com.practicum.imdbapi.data
+package com.practicum.imdbapi.domain.impl
 
+import com.practicum.imdbapi.data.NetworkClient
 import com.practicum.imdbapi.data.dto.MoviesSearchRequest
 import com.practicum.imdbapi.data.dto.MoviesSearchResponse
 import com.practicum.imdbapi.domain.api.MoviesRepository

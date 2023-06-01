@@ -2,14 +2,14 @@ package com.practicum.imdbapi.util
 
 import android.app.Activity
 import android.content.Context
-import com.practicum.imdbapi.data.MoviesRepositoryImpl
+import com.practicum.imdbapi.domain.impl.MoviesRepositoryImpl
 import com.practicum.imdbapi.data.network.RetrofitNetworkClient
 import com.practicum.imdbapi.domain.api.MoviesInteractor
 import com.practicum.imdbapi.domain.api.MoviesRepository
 import com.practicum.imdbapi.domain.impl.MoviesInteractorImpl
-import com.practicum.imdbapi.presentation.MoviesSearchController
+import com.practicum.imdbapi.presentation.movies.MoviesSearchPresenter
 import com.practicum.imdbapi.presentation.PosterController
-import com.practicum.imdbapi.ui.movies.MoviesAdapter
+import com.practicum.imdbapi.presentation.movies.MoviesView
 
 object Creator {
 
@@ -21,8 +21,14 @@ object Creator {
         return MoviesInteractorImpl(getMoviesRepository(context))
     }
 
-    fun provideMoviesSearchController(activity: Activity, adapter: MoviesAdapter): MoviesSearchController {
-        return MoviesSearchController(activity, adapter)
+    fun provideMoviesSearchPresenter(
+        moviesView: MoviesView,
+        context: Context,
+    ): MoviesSearchPresenter {
+        return MoviesSearchPresenter(
+            view = moviesView,
+            context = context,
+        )
     }
 
     fun providePosterController(activity: Activity): PosterController {
